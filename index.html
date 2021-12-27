@@ -44,13 +44,14 @@
 
     <!-- Main content -->
     <div class="profile-name-container">
+      <div class="profile-image-1 hidden"></div>
         <h3 class="hello-text">Hello,</h3>
         <div class="profile-content">
             <div class="profile-name">
                 <div class="intro-text">I'm <strong class="my-name">Anuj Upadhyaya</strong></div>
                 <div class="designation">Software Engineer</div>
             </div>
-            <div class="profile-image"></div>
+            <div class="profile-image-2"></div>
         </div>
     </div>
 
@@ -60,8 +61,8 @@
       </div>
     </div>
 
-    <div class="default-margin">
-      <div class="skills-container" id="skills">
+    <div class="default-margin" id="skills">
+      <div class="skills-container">
         <h4 class="skills-header">Skills</h4>
         <div class="skills-card-container">
           <div class="card">HTML</div>
@@ -82,25 +83,53 @@
     <div class="default-margin" id="experience">
       <div class="experience-container">
         <h4 class="experiece-header">Experience</h4>
-        <div class="experiencedetails-container">
-          <div class="exp-detailsList-left">
-            <div class="exp-detail-left">
-              <div class="data-container">
-                <p class="date-text-left">Jan 2020 - Sep 2020</p>
-                <p class="standard-left">Software Intern</p>
-                <p class="school-org">MAQ Software, Hyderabad</p>
+        <!-- This section is for large screens above 500px -->
+        <div class="large-screen"> 
+          <div class="experiencedetails-container">
+            <div class="exp-detailsList-left">
+              <div class="exp-detail-left">
+                <div class="data-container">
+                  <p class="date-text-left">Jan 2020 - Sep 2020</p>
+                  <p class="standard-left">Software Intern</p>
+                  <p class="school-org">MAQ Software, Hyderabad</p>
+                </div>
+                <div class="horizontal-line"></div>
               </div>
-              <div class="horizontal-line"></div>
+            </div>
+            <div class="vertical-line"></div>
+            <div class="exp-detailsList-right">
+              <div class="exp-detail-right">  
+                <div class="horizontal-line"></div>
+                <div class="data-container-right">
+                  <p class="date-text-right">Oct 2020 - Present</p>
+                  <p class="standard-right">Software Engineer</p>
+                  <p>MAQ Software, Hyderabad</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="vertical-line"></div>
-          <div class="exp-detailsList-right">
-            <div class="exp-detail-right">  
-              <div class="horizontal-line"></div>
-              <div class="data-container-right">
-                <p class="date-text-right">Oct 2020 - Present</p>
-                <p class="standard-right">Software Engineer</p>
-                <p>MAQ Software, Hyderabad</p>
+        </div>
+
+        <!-- This section is for small screens less than or equal to 500px -->
+        <div class="small-screen hidden">
+          <div class="experiencedetails-container">
+            <div class="vertical-line"></div>
+            <div class="exp-detailsList-right">
+              <div class="exp-detail-right">  
+                <div class="horizontal-line"></div>
+                <div class="data-container-right">
+                  <p class="date-text-right">Jan 2020 - Sep 2020</p>
+                  <p class="standard-right">Software Intern</p>
+                  <p>MAQ Software, Hyderabad</p>
+                </div>
+              </div>
+              <div class="exp-detail-right">  
+                <div class="horizontal-line"></div>
+                <div class="data-container-right">
+                  <p class="date-text-right">Oct 2020 - Present</p>
+                  <p class="standard-right">Software Engineer</p>
+                  <p>MAQ Software, Hyderabad</p>
+                </div>
               </div>
             </div>
           </div>
@@ -108,36 +137,75 @@
       </div>
     </div>
 
-    <div class="default-margin">
-      <div class="education-container" id="education">
-        <h4 class="education-header">Educational Qualifications</h4>
-        <div class="educationdetails-container">
-          <div class="edu-detailsList-left">
-            <div class="edu-detail-left">
-              <div class="data-container">
-                <p class="date-text-left">2014</p>
-                <p class="standard-left">10th (10 CGPA)</p>
-                <p class="school-org">Army Public School, Shillong</p>
+    <div class="default-margin" id="education">
+      <!-- This section is for large screens above 500px -->
+      <div class="large-screen">
+        <div class="education-container">
+          <h4 class="education-header">Educational Qualifications</h4>
+          <div class="educationdetails-container">
+            <div class="edu-detailsList-left">
+              <div class="edu-detail-left">
+                <div class="data-container">
+                  <p class="date-text-left">2014</p>
+                  <p class="standard-left">10th (10 CGPA)</p>
+                  <p class="school-org">Army Public School, Shillong</p>
+                </div>
+                <div class="horizontal-line"></div>
               </div>
-              <div class="horizontal-line"></div>
+              <div class="edu-detail-left">
+                <div class="data-container">
+                  <p class="date-text-left">2016-2020</p>
+                  <p class="standard-left">B.E. Computer Science (8.13 CGPA)</p>
+                  <p class="school-org">Army Public School, Shillong</p>
+                </div>
+                <div class="horizontal-line"></div>
+              </div>
             </div>
-            <div class="edu-detail-left">
-              <div class="data-container">
-                <p class="date-text-left">2016-2020</p>
-                <p class="standard-left">B.E. Computer Science (8.13 CGPA)</p>
-                <p class="school-org">Army Public School, Shillong</p>
+            <div class="vertical-line"></div>
+            <div class="edu-detailsList-right">
+              <div class="edu-detail-right">  
+                <div class="horizontal-line"></div>
+                <div class="data-container-right">
+                  <p class="date-text-right">2016</p>
+                  <p class="standard-right">12th (87%)</p>
+                  <p>Army Public School, Shillong</p>
+                </div>
               </div>
-              <div class="horizontal-line"></div>
             </div>
           </div>
-          <div class="vertical-line"></div>
-          <div class="edu-detailsList-right">
-            <div class="edu-detail-right">  
-              <div class="horizontal-line"></div>
-              <div class="data-container-right">
-                <p class="date-text-right">2016</p>
-                <p class="standard-right">12th (87%)</p>
-                <p>Army Public School, Shillong</p>
+        </div>
+      </div>
+
+      <!-- This section is for small screens less than or equal to 500px -->
+      <div class="small-screen hidden">
+        <div class="education-container">
+          <h4 class="education-header">Educational Qualifications</h4>
+          <div class="educationdetails-container">
+            <div class="vertical-line"></div>
+            <div class="edu-detailsList-right">
+              <div class="edu-detail-right">
+                <div class="horizontal-line"></div>
+                <div class="data-container-right">
+                  <p class="date-text-right">2014</p>
+                  <p class="standard-right">10th (10 CGPA)</p>
+                  <p>Army Public School, Shillong</p>
+                </div>
+              </div>
+              <div class="edu-detail-right">  
+                <div class="horizontal-line"></div>
+                <div class="data-container-right">
+                  <p class="date-text-right">2016</p>
+                  <p class="standard-right">12th (87%)</p>
+                  <p>Army Public School, Shillong</p>
+                </div>
+              </div>
+              <div class="edu-detail-right">
+                <div class="horizontal-line"></div>
+                <div class="data-container-right">
+                  <p class="date-text-right">2016-2020</p>
+                  <p class="standard-right">B.E. Computer Science (8.13 CGPA)</p>
+                  <p>Army Public School, Shillong</p>
+                </div>
               </div>
             </div>
           </div>

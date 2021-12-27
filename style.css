@@ -2,7 +2,6 @@
     --fontfamily-primary: 'Source Sans Pro', sans-serif;
     --fontfamily-secondary: 'Source Code Pro', monospace;
 
-    --fontweight-regular: 300;
     --fontweight-bold: 600;
 
     --clr-light: #fff;
@@ -17,6 +16,10 @@
 
 .navbar-brand {
     font-weight: var(--fontweight-bold);
+}
+
+.nav-item {
+    cursor: pointer;
 }
 
 .profile-name-container {
@@ -78,7 +81,9 @@
     margin-top: 32px;
 }
 
-.skills-container {
+.skills-container,
+.project-container,
+.education-container {
     max-width: 1024px;
     margin: 0 auto;
     background-color: #e9ecef;
@@ -89,7 +94,8 @@
     font-style: inherit; /* TODO: Change style */
 }
 
-.skills-card-container {
+.skills-card-container,
+.projects-card-container {
     display: flex;
     flex-wrap: wrap;
 }
@@ -102,13 +108,6 @@
     margin-right: 16px;
     margin-top: 16px;
     padding-top: 2px;
-}
-
-.education-container {
-    max-width: 1024px;
-    margin: 0 auto;
-    background-color: #e9ecef;
-    padding: 20px;
 }
 
 .education-header {
@@ -270,10 +269,6 @@ p {
     padding: 0;
 }
 
-.social-list__margin {
-    margin: 0 0.5em;
-}
-
 .social-list__link {
     padding: 1em;
 }
@@ -281,3 +276,38 @@ p {
 .hidden {
     display: none;
 }
+
+.icon-circle {
+    z-Index: 1;
+    float: right;
+    width: 56px;
+    height: 56px;
+    border-radius: 40px;
+    background-color: white;
+    margin-top: -40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--boxshadow);
+}
+
+.section-icons {
+    font-size: 32px;
+}
+
+.project-icon {
+    font-size: 24px;
+}
+
+.project {
+    cursor: pointer;
+    display: block;
+}
+
+.project-link {
+    width: 16px; 
+    height: 16px; 
+    padding-left: 5px;
+}
+
+.tooltip > .tooltip-inner {background-color: var(--clr-light); color: black; box-shadow: var(--boxshadow);}

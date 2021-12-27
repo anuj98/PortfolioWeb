@@ -2,9 +2,14 @@ $(document).ready(() => {
     const allNavItems = document.getElementsByClassName('nav-item');
     const cards = document.getElementsByClassName("card")
     for(let i=0; i<cards.length; i++) {
-        const len = cards[i].innerHTML.length
-        const text = cards[i].innerHTML
+        let text = cards[i].innerHTML
+        let extraSpaceForLink  = 0;
+        if(text.indexOf('<') > -1) {
+            text = text.split('<')[0].split('\n')[1].trim()
+            extraSpaceForLink = 8
+        }
         let calculatedWidth = 0;
+        const len = text.length
         for(let j=0; j<len; j++) {
             const charCode = text[j].charCodeAt(0)
             if(charCode>=65 && charCode<=90) {
@@ -17,6 +22,7 @@ $(document).ready(() => {
                 calculatedWidth+=15;
             }
         }
+        calculatedWidth+=extraSpaceForLink;
         cards[i].style.width = `${calculatedWidth}px`
     }
 
@@ -31,7 +37,7 @@ $(document).ready(() => {
         expDivsLeft[i].style["padding-top"] = `${i * 200}px`;
     }
 
-    const offsetY = 50;
+    const offsetY = 80;
     $('.nav-home').on('click', function() {
         $('html,body').animate({
             scrollTop: $(".profile-name-container").offset().top - offsetY},
@@ -125,7 +131,6 @@ $(document).ready(() => {
             $('.profile-image-2').addClass('hidden');
             $('.small-screen').removeClass('hidden');
             $('.large-screen').addClass('hidden');
-            console.log('called')
         } else {
             $('.profile-image-1').addClass('hidden');
             $('.profile-image-2').removeClass('hidden');
@@ -137,4 +142,8 @@ $(document).ready(() => {
     
     responsive(maxWidth);
     maxWidth.addEventListener("change", responsive);
+})
+
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
 })

@@ -53,20 +53,22 @@
 }
 
 .profile-image-1 {
-    border: 1px dashed;
     border-radius: 100px;
     width: 150px;
     height: 150px;
     margin: 0 auto;
+    object-fit: cover;
+    box-shadow: var(--boxshadow);
 }
 
 .profile-image-2 {
-    border: 1px dashed;
     border-radius: 100px;
     width: 150px;
     height: 150px;
     margin-left: 10px;
     display: inline-block;
+    object-fit: cover;
+    box-shadow: var(--boxshadow);
 }
 
 .about-me {
